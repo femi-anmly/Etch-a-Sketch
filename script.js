@@ -1,13 +1,14 @@
 const container = document.querySelector(".container");
+const container0 = document.querySelector("#header");
 
 const btn = document.createElement("button");
 btn.textContent = "Create Grid";
 btn.classList.toggle("button");
-container.appendChild(btn);
+container0.appendChild(btn);
 
 const breakDiv1 = document.createElement("div");
 breakDiv1.classList.toggle("break");
-container.appendChild(breakDiv1);
+container0.appendChild(breakDiv1);
 
 for (let j = 0; j < 16; j++)
     {
@@ -26,7 +27,7 @@ for (let j = 0; j < 16; j++)
                     squareDiv.remove();
                 }
 
-                squareDiv.addEventListener("mouseenter", leaveTrail);
+                squareDiv.addEventListener("mouseover", leaveTrail);
                 btn.addEventListener("click", removeGrid);
             }
 
