@@ -27,7 +27,8 @@ for (let j = 0; j < 16; j++)
                     squareDiv.remove();
                 }
 
-                squareDiv.addEventListener("mouseover", leaveTrail);
+                squareDiv.addEventListener("dragover", leaveTrail);
+                squareDiv.addEventListener("mousedown", leaveTrail);
                 btn.addEventListener("click", removeGrid);
             }
 
@@ -66,7 +67,8 @@ function newGrid(height, width) {
                 function removeGrid() {
                     squareDiv.remove();
                 }
-                squareDiv.addEventListener("mouseover", leaveTrail);
+                squareDiv.addEventListener("dragover", leaveTrail);
+                squareDiv.addEventListener("mousedown", leaveTrail);
                 btn.addEventListener("click", removeGrid);
             }
 
