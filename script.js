@@ -1,10 +1,16 @@
 const container = document.querySelector(".container");
 const container0 = document.querySelector("#header");
 
-const btn = document.createElement("button");
-btn.textContent = "Create Grid";
-btn.classList.toggle("button");
-container0.appendChild(btn);
+const createBtn = document.createElement("button");
+createBtn.textContent = "Create Grid";
+createBtn.classList.toggle("button");
+
+const resetBtn = document.createElement("button");
+resetBtn.textContent = "Reset Grid";
+resetBtn.classList.toggle("button");
+
+container0.appendChild(createBtn);
+container0.appendChild(resetBtn);
 
 const breakDiv1 = document.createElement("div");
 breakDiv1.classList.toggle("break");
@@ -22,14 +28,17 @@ for (let j = 0; j < 16; j++)
                     
                     squareDiv.style.backgroundColor = "grey";
                 }
-                
+                function resetGrid() {
+                    squareDiv.style.backgroundColor = "lightgrey";
+                }
                 function removeGrid() {
                     squareDiv.remove();
                 }
 
                 squareDiv.addEventListener("dragover", leaveTrail);
                 squareDiv.addEventListener("mousedown", leaveTrail);
-                btn.addEventListener("click", removeGrid);
+                resetBtn.addEventListener("click", resetGrid);
+                createBtn.addEventListener("click", removeGrid)
             }
 
         const breakDiv = document.createElement("div");
@@ -64,12 +73,17 @@ function newGrid(height, width) {
                 function leaveTrail() {
                     squareDiv.style.backgroundColor = "grey";
                 }
+
+                function resetGrid() {
+                    squareDiv.style.backgroundColor = "lightgrey";
+                }
                 function removeGrid() {
                     squareDiv.remove();
                 }
                 squareDiv.addEventListener("dragover", leaveTrail);
                 squareDiv.addEventListener("mousedown", leaveTrail);
-                btn.addEventListener("click", removeGrid);
+                resetBtn.addEventListener("click", resetGrid);
+                createBtn.addEventListener("click", removeGrid)
             }
 
         const breakDiv = document.createElement("div");
@@ -79,7 +93,7 @@ function newGrid(height, width) {
 
 }
 
-btn.addEventListener("click", newGrid);
+createBtn.addEventListener("click", newGrid);
 
 
 
