@@ -80,7 +80,7 @@ function newGrid(height, width) {
                 function removeGrid() {
                     squareDiv.remove();
                 }
-                squareDiv.addEventListener("dragover", leaveTrail);
+                squareDiv.addEventListener("dragenter", leaveTrail);
                 squareDiv.addEventListener("mousedown", leaveTrail);
                 resetBtn.addEventListener("click", resetGrid);
                 createBtn.addEventListener("click", removeGrid)
