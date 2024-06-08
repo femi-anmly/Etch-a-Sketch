@@ -35,7 +35,7 @@ for (let j = 0; j < 16; j++)
                     squareDiv.remove();
                 }
 
-                squareDiv.addEventListener("dragover", leaveTrail);
+                squareDiv.addEventListener("dragenter", leaveTrail);
                 squareDiv.addEventListener("mousedown", leaveTrail);
                 resetBtn.addEventListener("click", resetGrid);
                 createBtn.addEventListener("click", removeGrid)
