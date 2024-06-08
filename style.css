@@ -1,11 +1,8 @@
 div.container {
     display: flex;
-    height: 960px;
+    height: 50%;
     width: 960px;
     background-color: lightgray;
-    border-style: solid;
-    border-color: black;  
-    border-width: 10px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -15,7 +12,7 @@ div.container {
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     gap: 100px;
     justify-content: center;
@@ -39,6 +36,7 @@ button {
     border-color: black;
     background-color: lightgray;
     display: flex;
+    flex: 1;
 }
 
 
